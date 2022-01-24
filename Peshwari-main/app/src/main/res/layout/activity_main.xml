@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:context=".activity.MainActivity"
+    android:id="@+id/rmain">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_layer_name"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pan"
+        android:layout_below="@id/txtpeshwari"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/txtpeshwari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="𝕻𝖊𝖘𝖍𝖜𝖆𝖗𝖎"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colororange"
+        android:textStyle="bold" />
+
+    <!--<com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        app:SpinKit_Color="@color/colororange"
+        />
+-->
+</RelativeLayout>

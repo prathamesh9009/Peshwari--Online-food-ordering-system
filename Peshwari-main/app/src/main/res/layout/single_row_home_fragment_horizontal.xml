@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="10dp"
+    android:elevation="1dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="250dp"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/txtoffer"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="UP TO 50% OFF"
+        android:gravity="center"
+        android:background="#fff"
+        android:layout_marginBottom="78dp"
+        android:layout_marginStart="10dp"
+        android:textColor="#FF9800"
+        android:layout_gravity="bottom"/>
+    <TextView
+        android:id="@+id/txtdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="COOKED WITH HYGIENE"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="10dp"
+        android:textColor="#fff"
+        android:layout_gravity="bottom"/>
+    <TextView
+        android:id="@+id/txtResName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="Pind Tadka"
+        android:textColor="#fff"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"/>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shimmer_colored="true"
+        android:textColor="#E91E63"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="bottom">
+    <TextView
+        android:id="@+id/txtgoahead"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:drawableEnd="@drawable/ic_arrow"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="ORDER NOW"
+        android:gravity="center"
+        android:textColor="#E91E63"
+
+        />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.cardview.widget.CardView>

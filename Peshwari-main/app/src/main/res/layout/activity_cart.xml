@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CartActivity">
+
+    <RelativeLayout
+        android:id="@+id/remptylayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imgfood"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/ic_food"/>
+
+        <TextView
+            android:id="@+id/txtgoodfood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GOOD FOOD IS ALWAYS COOKING"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_below="@id/imgfood"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:fontFamily="@font/sf_pro_display_medium"
+            />
+        <TextView
+            android:id="@+id/txtempty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your cart is empty \n Add something from the menu"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:layout_below="@id/txtgoodfood"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:fontFamily="@font/sf_pro_display_light"
+            />
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colororange"
+            android:text="Browse Restaurants"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant :"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/txtResName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_toRightOf="@id/txtname"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/darkergray"
+            android:layout_below="@id/txtname"/>
+
+        <androidx.cardview.widget.CardView
+            android:elevation="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/view"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rheader"
+        android:layout_above="@id/views">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rbody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtbill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Details"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="items in your basket"
+                android:layout_below="@id/txtbill"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/txtbill"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtItemTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Total"
+                android:layout_below="@id/txtItem"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtItemTotals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.200"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/txtItemCount"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/txtDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Fee"
+                android:layout_below="@id/txtItemTotal"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtDeliveryFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.27"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/txtItemTotals"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <View
+                android:id="@+id/viewd"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/dotted_line"
+                android:layout_below="@id/txtDelivery"/>
+
+            <TextView
+                android:id="@+id/txtToPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Pay"
+                android:layout_below="@id/viewd"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/txtToPayD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.200"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/viewd"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtdidyouknow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corona Precautions"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_corona"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your safety is our number 1 priority."
+                android:textStyle="bold"
+                android:layout_below="@id/txtdidyouknow"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.All our employee is well sanitized \n 2.We often check their body temperatures.\n 3.We ensure that none of our employee misbehaves. \n 4.A hygenic food from us is your right."
+                android:textSize="12sp"
+                android:layout_below="@id/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A food is something that provides nutrients. Nutrients are substances that provide: energy for activity, growth, and all functions of the body such as breathing, digesting food, and keeping warm; materials for the growth and repair of the body, and for keeping the immune system healthy."
+                android:textSize="12sp"
+                android:layout_below="@id/line1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/views"
+        android:layout_above="@id/rbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dotted_line"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#EFEFEF"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.421"
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total amount to be paid"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:background="#4CAF50"
+                android:text="PROCEED TO PAY"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

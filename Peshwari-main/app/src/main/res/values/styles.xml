@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme">Theme</style>
+
+    <style name="LabelStyle" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="SolidButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/solid_bg</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+    <style name="StrokeButtonStyle" parent="SolidButtonStyle">
+        <item name="android:background">@drawable/stroke_bg</item>
+        <item name="android:textColor">@color/colororange</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/divider</item>
+        <item name="android:textColor">@color/edit_text_txt</item>
+        <item name="android:textColorHint">@color/edit_text_hint</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+</resources>

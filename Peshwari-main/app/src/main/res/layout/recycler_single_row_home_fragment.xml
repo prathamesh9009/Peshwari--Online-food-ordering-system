@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:id="@+id/cardview"
+    android:elevation="1dp"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_food"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_food"/>
+
+    <TextView
+        android:id="@+id/txtFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:layout_toRightOf="@+id/img_food"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+        <TextView
+            android:id="@+id/txtverified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verified"
+            android:drawableLeft="@drawable/ic_verified"
+            android:textColor="#008000"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            />
+        <TextView
+            android:id="@+id/txtoffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APPLY COUPON | USE PESHWARI"
+            android:textColor="#A52A2A"
+            android:layout_toRightOf="@+id/img_food"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtFoodName"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/dotted_line"
+            android:layout_toEndOf="@id/img_food"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_above="@id/rbottomdetails"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            />
+    <RelativeLayout
+        android:id="@+id/rbottomdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_food"
+        android:layout_toEndOf="@id/img_food">
+
+        <ImageView
+            android:id="@+id/img_fav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_fav"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+
+        <TextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/ic_rating"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+        <View
+            android:id="@+id/dot"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:background="@color/darkergray"
+            android:layout_toEndOf="@id/txtRating"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/txtFoodPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs.500"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/dot"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+       <!-- <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/dotted_line"
+            android:layout_toEndOf="@id/img_food"
+            android:layout_below="@id/rbottomdetails"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            />-->
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

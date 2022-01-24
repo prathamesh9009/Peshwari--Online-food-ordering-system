@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfirmActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rProcessing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtwait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lottieP"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Confirming your order from restaurant please wait..."
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieP"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/brochure"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rConfirmed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your order is confirmed by the restaurant"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_above="@id/lottieC"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieC"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/confirm"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/btnok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textColor="#fff"
+            android:background="#5BD661"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

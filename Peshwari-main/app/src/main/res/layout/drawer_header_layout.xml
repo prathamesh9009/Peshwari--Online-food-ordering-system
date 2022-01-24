@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/colororange"
+    android:id="@+id/drawerhead">
+
+    <ImageView
+        android:id="@+id/img_prof"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prof"
+        android:layout_margin="20dp" />
+    <TextView
+        android:id="@+id/txtprofname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ritik Sarang"
+        android:layout_below="@id/img_prof"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/txtprofmobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91 685979035"
+        android:layout_below="@id/txtprofname"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+</RelativeLayout>

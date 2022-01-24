@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Peshwari</string>
+
+    <!-- Login Activity strings-->
+    <string name="login_welcome_txt">Hello there !\nWelcome Back</string>
+    <string name="signup_welcome_txt">Hello there !\nWelcome to you</string>
+
+    <!--Titles-->
+    <string name="login_title">Login</string>
+    <string name="signup_title">Sign up</string>
+
+    <!--Button labels-->
+    <string name="login_btn_label">Login</string>
+    <string name="signup_btn_label">Signup</string>
+
+    <string name="preferences_file_name">HomePage savepreferences</string>
+    <string name="preferences_profile_name">Profile savepreferences</string>
+    <string name="opendrawer">Open drawer</string>
+    <string name="closedrawer">Close drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Frequently asked questions String-->
+    <string name="faq_answer_one">A.1 You will be taught using pre-recorded videos and text tutorials. The training has
+        quizzes, assignments, and tests to help you learn better. At the end of the training, you will attempt a project
+        to get hands-on practice of what you learn during your training.
+    </string>
+    <string name="faq_answer_two">A.2 As this is a purely online training program, you can choose to learn at any time
+        of the day. We will recommend a pace to be followed throughout the program, but the actual timings and learning
+        hours can be decided by students according to their convenience.
+    </string>
+    <string name="faq_answer_four">A.4 We recommend spending 10-12 hours per week. However, the actual learning hours
+        can be decided by you as per your convenience.
+    </string>
+    <string name="faq_answer_three">A.3 The training duration is of 6 weeks.</string>
+    <string name="faq_answer_five">A.5 You can choose your preferred batch date while signing up for the training
+        program.
+    </string>
+    <string name="faq_answer_six">A.6 You will be able to download the certificate once you complete your training and
+        take the final test.
+    </string>
+
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.OrderHistoryFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Your previous orders are listed below :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/darkergray"
+        android:layout_below="@id/order"
+        android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/l1Hasorders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout">
+        <androidx.cardview.widget.CardView
+            android:elevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerviewOrderH"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/r2Noorders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgfav"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_checkfav"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hey! It seems like you have not ordered anything yet\n Go ahead and order your items."
+            android:layout_below="@id/imgfav"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:gravity="center"/>
+    </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
